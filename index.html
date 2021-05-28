@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g==" crossorigin="anonymous" />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
@@ -18,11 +19,11 @@
     <header class="header">
       <div class="container header-container">
       <nav class="nav-list-all">
-        <a class="logo" href="./index.html"> <span class="logo-color"> Web</span>Studio</a>
+        <a class="logo animate__bounce animate__animated" href="./index.html"> <span class="logo-color"> Web</span>Studio</a>
         <ul class="menu" >
-          <li><a href="./index.html">Студия</a></li>
-          <li><a href="./portfolio.html">Портфолио</a></li>
-          <li><a href="./index.html">Контакты</a></li>
+          <li><a class="nav-links" href="./index.html">Студия</a></li>
+          <li><a class="nav-links" href="./portfolio.html">Портфолио</a></li>
+          <li><a class="nav-links" href="./index.html">Контакты</a></li>
         </ul>
       </nav>
       <!-- contacts section-->
@@ -44,7 +45,7 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-name">Эффективные решения для вашего бизнеса</h1>
-          <button class="button-hero" type="button">Заказать услугу</button>
+          <button class="button-hero" type="button" data-modal-open>Заказать услугу</button>
         </div>
       </section>
 
@@ -98,6 +99,9 @@
               />
             </li>
             <li>
+              <div>
+                Мобильные приложения
+              </div>
               <img
                 class="img-two"
                 src="./images/what-we-do/box-2.jpg"
@@ -106,7 +110,9 @@
                 height="294"
               />
             </li>
-            <li>
+            <li><div>
+              Дизайнерские решения
+            </div>
               <img
                 class="img-three"
                 src="./images/what-we-do/box-3.jpg"
@@ -296,8 +302,15 @@
         </address>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+    
 
-
-
+    <div class="modal">
+      <button class="modal-close-btn" type="button" data-modal-close> <svg class="close-icon">
+        <use width="30" height="30" href="./images/icon-img/symbol-defs.svg#icon-close"></use>
+      </svg></button>
+    </div>
+  </div>
+<script src="./js/modal.js"></script>
   </body>
 </html>
